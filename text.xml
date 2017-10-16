@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window title="TextEdit">
+  <button id="openBtn">Open...</button>
+  <button id="saveBtn">Save</button>
+  <br/>
+  <file-area id='area' file="AppData/TextEdit/intro.txt" contenteditable=""></file-area>
+</window>

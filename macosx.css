@@ -1,0 +1,112 @@
+body {
+  background-image: url(images/Background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+div.taskbar  {
+      width: 100%;
+  background-color: #979797;
+  margin: 0;
+  padding: 6px;
+}
+table.window {
+      box-shadow: 10px 10px 5px #888888;
+      position: absolute;
+      z-index: 50;
+      top: attr(data-y);
+      left: attr(data-x);
+      color: black;
+}
+table.window:not(.custom-title) {
+      background: #cccbcb;
+      border: 3px ridge #c3c3c3;
+}
+table.window tr:first-child {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b5bdc8+0,828c95+100,28343b+100 */
+background: #b5bdc8; /* Old browsers */
+background: -moz-linear-gradient(top, #b5bdc8 0%, #828c95 100%, #28343b 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #b5bdc8 0%,#828c95 100%,#28343b 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #b5bdc8 0%,#828c95 100%,#28343b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#28343b',GradientType=0 ); /* IE6-9 */
+}
+table.window tr:first-child  {
+  width: 100%;
+  display: flex;
+  flex-direction: collumn;
+  justify-content: flex-start;
+}
+tr.window-title span {
+  align-self: center;
+  margin-left: 6px;
+}
+button {
+  border-radius: 5px;
+}
+button.window-button {
+  border: 1px solid black;
+  border-radius: 50%;
+  opacity: .5;
+}
+.window-button:hover {
+  opacity: 1;
+}
+.window-button.close {
+  background-color: red;
+  color: red;
+}
+.window-button.maximize {
+  background-color: green;
+  color: green;
+}
+.window-button.minimize {
+  background-color: yellow;
+  color: yellow;
+}
+  div.loader {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 1;
+      width: 150px;
+      height: 150px;
+      margin: -75px 0 0 -75px;
+      background-color: #888888;
+      border: 16px outset #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid #00004d;
+      width: 120px;
+      height: 120px;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.flexbox {
+      display: flex;
+      background-color: inherit;
+}
+.flex-item {
+      width: 100px;
+      height: 100px;
+      margin: 25px;
+      border-width: 1px;
+      border-style: solid;
+      background-color: inherit;
+  border-color: black;
+}
+*:focus {
+  outline: none;
+}
+* {
+  user-select: none;
+  cursor: default;
+}
+file-area {
+  font-family: monospace;
+  white-space: pre;
+}

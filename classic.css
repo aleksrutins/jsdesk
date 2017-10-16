@@ -1,0 +1,176 @@
+button {
+      border-radius: 0px;
+      border-width: 4px;
+      border-style: outset;
+      background: #bfbfbf;
+      border-color: #bfbfbf;
+      color: black
+}
+button.window-button {
+      border-radius: 0px;
+      border-width: 3px;
+      float: right;
+      background-color: #cccbcb;
+      border-color: #cccbcb;
+  margin-right: 2px;
+}
+*.flat, *.flat * {
+      background-color: transparent;
+      border: 1px solid black;
+      border-radius: 0;
+      margin: 2px;
+}
+* {
+    user-select: none;
+}
+div.flat {
+      border: none;
+}
+*.flat:active:not(div), *.flat *:active:not(div) {
+      background-color: grey;
+}
+button:active {
+      border-style: inset;
+}
+button.close:active {
+      border-width: 2px;
+}
+button.close {
+  margin-left: 6px;
+}
+body.main {
+      z-index: -50;
+      background-image: url(images/Background.png);
+      background-color: lightblue;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      color: white;
+      font-family: sans-serif;
+}
+a[onclick]:visited {
+      color: cyan;
+}
+a {
+      color: cyan;
+}
+html {
+      height: 100%;
+      width: 100%;
+}
+div.startmenu {
+      display: none;
+      background-image: url(images/startmenu.png);
+      position: absolute;
+      bottom: 20px;
+}
+div.taskbar  {
+      width: 100%;
+      position: absolute;
+      bottom: 0px;
+  background-color: #979797;
+  margin: 0;
+  padding: 6px;
+}
+table.window {
+      box-shadow: 10px 10px 5px #888888;
+      position: absolute;
+      z-index: 50;
+      top: attr(data-y);
+      left: attr(data-x);
+      color: black;
+}
+table.window:not(.custom-title) {
+      background: #cccbcb;
+      border: 3px ridge #c3c3c3;
+}
+table.window.custom-title {
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      background-color: white;
+      padding: 0;
+}
+table.window tr:last-child td {
+      height: 100%;
+      width: 100%;
+}
+table.window tr:last-child td {
+      vertical-align: baseline;
+}
+button:focus, input:focus, select:focus {
+      outline: none;
+}
+select.flat option:active {
+      background-color: grey;
+}
+input, select {
+      border-style: inset;
+      border-width: 3px;
+      background-color: inherit;
+}
+*[contenteditable]:focus {
+  outline: none;
+}
+*[contenteditable] {
+  min-height: 50;
+}
+iframe {
+      width:100%;
+      height: auto;
+}
+tr.window-title {
+      background-color: #00004d;
+      border-style: outset;
+      border-color: #c3c3c3;
+  font-size: small;
+}
+tr.window-title td span {
+      color: white;
+  margin-right: 8px;
+}
+file-area {
+      font-family: monospace;
+      white-space: pre;
+}
+
+div.loader {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 1;
+      width: 150px;
+      height: 150px;
+      margin: -75px 0 0 -75px;
+      background-color: #888888;
+      border: 16px outset #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid #00004d;
+      width: 120px;
+      height: 120px;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.flexbox {
+      display: flex;
+      background-color: inherit;
+}
+.flex-item {
+      width: 100px;
+      height: 100px;
+      margin: 25px;
+      border-width: 5px;
+      border-style: outset;
+      background-color: inherit;
+}
+header {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+}

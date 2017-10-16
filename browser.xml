@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window title="Web Browser">
+      <p><input type='text' placeholder="URL" id='url'/> <button onclick="Element('#doc').setAttribute('src', Element('#url').value);">Go!</button></p>
+      <iframe id="doc"></iframe>
+</window>

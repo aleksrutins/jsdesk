@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>JSDesk</title>
+      <script>document.write(`<link rel="stylesheet" href="${localStorage['theme']? localStorage['theme'] : 'classic'}.css">`)</script>
+      <script type="text/javascript" src="jsdesk.js"></script>
+</head>
+<body class="main">
+  <div class="loader"></div>
+  <div class="taskbar">
+    <button onclick="Window(200,200,'fm')">File Manager</button>
+    <button onclick="Window(200,200,'browser')">WWW Browser</button>
+    <button onclick="Window(200,200,'intro')">Help</button>
+    <button onclick="Window(200,200,'text')">TextEdit</button>
+    <button onclick="Window(200,200,'themer')">Theme Settings</button>
+  </div>
+  <h1>Welcome to JSDesk!</h1>
+  <script>
+        var fs = localStorage['fs'] != undefined? JSON.parse(localStorage['fs']) : getJsonSync('start-fs.json');
+        setTimeout(function() {document.querySelector('div.loader').style.display = "none";}, 500);
+  </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<window title="Theme Settings">
+  <h1>Theme</h1>
+  <select id="theme">
+    <option value="classic">Classic</option>
+    <option value="macosx">MacOS X</option>
+  </select>
+  <button id="save">Save and Refresh</button>
+</window>

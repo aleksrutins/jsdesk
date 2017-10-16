@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window title="Open With...">
+      <div class='flat'>
+            <header style='background-color: cyan'>Open With...</header>
+            <select>
+                  <option>TextEdit</option>
+            </select>
+            <br/>
+            <button id='okBtn'>OK</button>
+            <button id='cancelBtn'>Cancel</button>
+      </div>
+</window>

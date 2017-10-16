@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window title="File Manager">
+  <button id="openBtn">Open</button>
+  <button id="newBtn">New</button>
+  <button id="rootBtn">Root</button>
+  <button id="deleteBtn">Delete</button>
+  <h2>Directory of <span id="dir"></span></h2>
+  <div class='flexbox' id='filesTable'>
+  </div>
+</window>

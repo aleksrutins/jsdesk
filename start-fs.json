@@ -1,0 +1,15 @@
+{
+  "_path": "",
+  "Help": {
+    "_path": "Help",
+    "help.txt": "Help on using JSDesk 1.0.0\nBla. Bla Bla."
+  },
+  "AppData": {
+    "_path": "AppData",
+    "TextEdit": {
+      "_path": "AppData/TextEdit",
+      "intro.txt": "TextEdit\nStart by cicking \"Open\""
+    }
+  },
+  "test.txt": "Test text file"
+}
