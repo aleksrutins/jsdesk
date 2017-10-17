@@ -22,7 +22,7 @@ table.window:not(.custom-title) {
       background: #cccbcb;
       border: 3px ridge #c3c3c3;
 }
-table.window tr:first-child {
+table.window tr:first-child, window.custom-title header {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b5bdc8+0,828c95+100,28343b+100 */
 background: #b5bdc8; /* Old browsers */
 background: -moz-linear-gradient(top, #b5bdc8 0%, #828c95 100%, #28343b 100%); /* FF3.6-15 */
@@ -40,8 +40,14 @@ tr.window-title span {
   align-self: center;
   margin-left: 6px;
 }
-button {
+button:not(.window-button), select, input {
   border-radius: 5px;
+  border: 1px solid black;
+  background-color: white;
+  padding: 4px;
+}
+button:not(.window-button):hover:not(:active) {
+  background-color: grey;
 }
 button.window-button {
   border: 1px solid black;
