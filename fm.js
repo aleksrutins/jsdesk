@@ -12,7 +12,7 @@ updateState();
 var openSelected = function() {Window(250,250,'fm-opendlg', {flags: flags_useCustomTitlebar});}
 wnd.querySelector("#openBtn").onclick = openSelected;
 newBtn.onclick = function() {
-  fsapi.newFile(curDir._path + "/" + prompt("File Name:"), "This is a new file.");
+  fsapi.newFile(("_path" in curDir? curDir._path + "/" : "") + prompt("File Name:"), "This is a new file.");
   updateState();
 }
 rootBtn.onclick = function() {
@@ -39,7 +39,7 @@ function updateState() {
       finnerHTML += `<div class='flex-item'>${(typeof(curDir[file])).toLowerCase() == "string"? file : "<b>" + file + "</b>"}</div>`;
     }
   }
-  dir.textContent = "/" + curDir._path;
+  dir.textContent = "/" + (curDir._path? curDir._path : "");
   curDir_str = curDir._path;
   filesTable.innerHTML = finnerHTML;
   updateDirEventHandlers(filesTable.querySelectorAll('.flex-item'));

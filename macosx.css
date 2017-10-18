@@ -40,11 +40,12 @@ tr.window-title span {
   align-self: center;
   margin-left: 6px;
 }
-button:not(.window-button), select, input {
+button:not(.window-button), select, input, .flex-item {
   border-radius: 5px;
   border: 1px solid black;
   background-color: white;
   padding: 4px;
+  margin: 2px;
 }
 button:not(.window-button):hover:not(:active) {
   background-color: grey;
@@ -97,13 +98,7 @@ button.window-button {
       background-color: inherit;
 }
 .flex-item {
-      width: 100px;
-      height: 100px;
-      margin: 25px;
-      border-width: 1px;
-      border-style: solid;
-      background-color: inherit;
-  border-color: black;
+  margin: 6px;
 }
 *:focus {
   outline: none;
