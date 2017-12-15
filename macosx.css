@@ -3,6 +3,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
+  margin: 0;
+}
+body > :not(.taskbar) {
+  margin: 8px;
 }
 div.taskbar  {
       width: 100%;
@@ -11,67 +15,96 @@ div.taskbar  {
   padding: 6px;
 }
 table.window {
-      box-shadow: 10px 10px 5px #888888;
+      box-shadow: 10px 10px 5px #000000;
       position: absolute;
       z-index: 50;
       top: attr(data-y);
       left: attr(data-x);
       color: black;
+      border: 1px solid black;
+      border-radius: 4px;
+      background-repeat: no-repeat;
+      background-color: #d9d9d9;
+      resize: both;
 }
 table.window:not(.custom-title) {
-      background: #cccbcb;
-      border: 3px ridge #c3c3c3;
+  background-image: url(macos_window.png);
 }
-table.window tr:first-child, window.custom-title header {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b5bdc8+0,828c95+100,28343b+100 */
-background: #b5bdc8; /* Old browsers */
-background: -moz-linear-gradient(top, #b5bdc8 0%, #828c95 100%, #28343b 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, #b5bdc8 0%,#828c95 100%,#28343b 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, #b5bdc8 0%,#828c95 100%,#28343b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#28343b',GradientType=0 ); /* IE6-9 */
-}
+/* table.window tr:first-child, window.custom-title header {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#72797f+0,929da3+51,596a72+100 
+background: #72797f; /* Old browsers 
+background: -moz-linear-gradient(top, #72797f 0%, #929da3 51%, #596a72 100%); /* FF3.6-15 
+background: -webkit-linear-gradient(top, #72797f 0%,#929da3 51%,#596a72 100%); /* Chrome10-25,Safari5.1-6 
+background: linear-gradient(to bottom, #72797f 0%,#929da3 51%,#596a72 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#72797f', endColorstr='#596a72',GradientType=0 ); /* IE6-9 
+text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
+} */
 table.window tr:first-child  {
   width: 100%;
   display: flex;
   flex-direction: collumn;
   justify-content: flex-start;
+  margin: 0;
+  margin-bottom: 6px;
+  background-image: url(macos_window_background.png);
+  background-repeat: repeat-x;
 }
 tr.window-title span {
   align-self: center;
   margin-left: 6px;
   text-align: center;
 }
-button:not(.window-button), select, input, .flex-item {
-  border-radius: 5px;
-  border: 1px solid black;
-  background-color: white;
-  padding: 4px;
-  margin: 2px;
+.window-button:hover {
+  color: black;
 }
-button:not(.window-button):hover:not(:active) {
-  background-color: grey;
+.flex-item {
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+button:not(.window-button), select {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f6f6+0,dbdce2+21,b8bac6+49,dddfe3+80,f5f6f6+100;Grey+Pipe */
+background: #f5f6f6; /* Old browsers */
+background: -moz-linear-gradient(top, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=0 ); /* IE6-9 */
+border: 1px solid black;
+box-shadow: #888888;
+border-radius: 4px;
+}
+button:not(.window-button):active {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
+background: #1e5799; /* Old browsers */
+background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
 }
 button.window-button {
-  border: 1px solid black;
-  border-radius: 50%;
-  height: 20px;
-  width: 20px;
-  opacity: .5;
-}
-.window-button:hover {
-  opacity: 1;
+  border: 1px solid transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: transparent;
+  background-color: transparent;
+  padding: 3px;
 }
 .window-button.close {
-  background-color: red;
-  color: red;
+	background-image: url(macos_window_close.png);
 }
 .window-button.maximize {
-  background-color: green;
-  color: green;
+	/* background: #b4ddb4; */
+	/* background: -moz-radial-gradient(center, ellipse cover, #b4ddb4 0%, #83c783 17%, #52b152 33%, #008a00 67%, #005700 83%, #002400 100%); */
+	/* background: -webkit-radial-gradient(center, ellipse cover, #b4ddb4 0%,#83c783 17%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%); */
+	/* background: radial-gradient(ellipse at center, #b4ddb4 0%,#83c783 17%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%); */
+	/* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4ddb4', endColorstr='#002400',GradientType=1 ); */
+	background-image: url(macos_window_maximize.png);
 }
 .window-button.minimize {
-  background-color: yellow;
-  color: yellow;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fefcea+0,f1da36+100;Gold+3D */
+background-image: url(macos_window_minimize.png);
 }
   div.loader {
       position: absolute;
@@ -108,9 +141,23 @@ button.window-button {
 }
 * {
   user-select: none;
+  -moz-user-select: none;
   cursor: default;
+  font-family: sans-serif;
 }
 file-area {
   font-family: monospace;
   white-space: pre;
+}
+body.ios *:not(.window-button) {
+  background: white !important;
+}
+body.ios table.window {
+  border-radius: 6px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+body.ios button:hover:not(:active):not(.window-button) {
+  background-color: grey !important;
 }

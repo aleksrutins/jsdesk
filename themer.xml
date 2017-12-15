@@ -6,5 +6,8 @@
     <option value="classic">Classic</option>
     <option value="macosx">MacOS X</option>
   </select>
+  <div id="ios" style="display: none;">
+    <input type="checkbox" id="ioscb"/>iOS look
+  </div>
   <button id="save">Save and Refresh</button>
 </window>

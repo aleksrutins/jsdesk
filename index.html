@@ -21,6 +21,9 @@
   <script>
         var fs = localStorage['fs'] != undefined? JSON.parse(localStorage['fs']) : getJsonSync('start-fs.json');
         setTimeout(function() {document.querySelector('div.loader').style.display = "none";}, 500);
+    if(localStorage["iOS"] == "true" && localStorage["theme"] == "macosx") {
+      document.body.classList.add("ios");
+    }
   </script>
 </body>
 </html>
