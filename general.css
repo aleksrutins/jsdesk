@@ -1,4 +1,4 @@
-table.window {
+table.window tr:not(.window-title) td {
   resize: both;
   overflow: auto;
 }
