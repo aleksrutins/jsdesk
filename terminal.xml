@@ -1,1 +1,4 @@
 <?xml version="1.0"?>
+<window title="Terminal">
+  <frame src="https://munchkinhalfling.github.io/jsshell"></frame> <!--Not a very good way to do it, but okay for now-->
+</window>
