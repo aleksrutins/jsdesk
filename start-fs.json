@@ -7,7 +7,7 @@
     "_path": "AppData",
     "TextEdit": {
       "_path": "AppData/TextEdit",
-      "intro.txt": "TextEdit\nStart by cicking \"Open\""
+      "intro.txt": "TextEdit\nStart by clicking \"Open\""
     }
   },
   "test.txt": "Test text file"
